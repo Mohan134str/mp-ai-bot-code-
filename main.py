@@ -1,17 +1,4 @@
 import streamlit as st
-from PIL import Image
-import io
-
-def set_background(image_path):
-    page_bg_img ='''
-    <style>
-    body {
-    background-image: url("'''+ image_path +'''");
-    background-size: cover;
-    }
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 import streamlit as st
 import google.generativeai as genai
@@ -22,7 +9,7 @@ def ai(txt):
         if 'generateContent' in m.supported_generation_methods:
             print(m.name)
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content("from now your name is hakern and your a ethical hacker , your real name is mohan s and reply to this in short: "+txt)
+    response = model.generate_content("from now your name is hakern and RTC and reply to this in short: "+txt)
     return response.text
 
 
