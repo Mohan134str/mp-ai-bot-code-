@@ -1,4 +1,17 @@
 import streamlit as st
+from pil import Image
+import io
+
+def set_background(image_path):
+    page_bg_img =(image_path):
+    <style>
+    body {
+    background-image: url("'''+ image_path +'''");
+    background-size: cover;
+    }
+    </style>
+    '''
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 import streamlit as st
 import google.generativeai as genai
