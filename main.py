@@ -3,7 +3,7 @@ from pil import Image
 import io
 
 def set_background(image_path):
-    page_bg_img =(image_path):
+    page_bg_img ='''
     <style>
     body {
     background-image: url("'''+ image_path +'''");
