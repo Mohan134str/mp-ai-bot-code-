@@ -1,5 +1,5 @@
 import streamlit as st
-from pil import Image
+from PIL import Image
 import io
 
 def set_background(image_path):
